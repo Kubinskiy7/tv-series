@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сериалы с рейтингами</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <script defer src="scripts/main.js"></script>
+    <script defer src="theme.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Рейтинги сериалов</h1>
+        <div class="theme-switcher">
+            <button id="theme-toggle" class="theme-toggle">
+                🌞/🌙
+            </button>
+        </div>
+    </header>
+    <main>
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Найти сериал..." autocomplete="off">
+            <div id="suggestions" class="suggestions"></div>
+        </div>
+        <section id="series-details" class="hidden"></section>
+    </main>
+</body>
+</html>
