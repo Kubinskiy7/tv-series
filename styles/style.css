@@ -1,82 +1,143 @@
+/* Общие настройки */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Inter', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    transition: background-color 0.3s, color 0.3s;
+    background: #1e1e2f;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
-    background-color: var(--header-bg);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    background: #282845;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
 
-h1 {
-    font-size: 1.5rem;
-}
-
-.theme-toggle {
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-}
-
-.search-container {
-    margin: 2rem auto;
+header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    color: #c5c5ff;
     text-align: center;
 }
 
+.search-container {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
 #search-input {
-    padding: 0.5rem;
-    width: 90%;
-    max-width: 500px;
-    border: 1px solid var(--border-color);
+    padding: 0.8rem;
+    font-size: 1rem;
     border-radius: 5px;
+    border: none;
+    outline: none;
+    flex-grow: 1;
+    max-width: 400px;
 }
 
-.suggestions {
-    margin: 0.5rem auto;
-    max-width: 500px;
-    text-align: left;
-    position: relative;
-}
-
-.suggestions div {
-    background-color: var(--suggestion-bg);
-    padding: 0.5rem;
-    border: 1px solid var(--border-color);
+#search-button {
+    padding: 0.8rem 1.2rem;
+    font-size: 1rem;
+    background: #5c5cff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
 }
 
-.suggestions div:hover {
-    background-color: var(--suggestion-hover);
+#search-button:hover {
+    background: #7474ff;
 }
 
+.suggestions {
+    margin-top: 0.5rem;
+    position: absolute;
+    width: 400px;
+    max-width: 90%;
+    background: #33334d;
+    border-radius: 5px;
+    overflow: hidden;
+    z-index: 100;
+}
+
+.suggestions div {
+    padding: 0.8rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.suggestions div:hover {
+    background: #5c5cff;
+}
+
+.main {
+    margin-top: 2rem;
+    max-width: 800px;
+}
+
+/* Страница списка сериалов */
+.series-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.series-card {
+    background: #2a2a45;
+    border-radius: 10px;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.series-card:hover {
+    transform: translateY(-5px);
+    background: #3c3c5c;
+}
+
+.series-card img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.series-card h3 {
+    margin: 0.5rem 0;
+}
+
+/* Страница деталей сериала */
 .hidden {
     display: none;
 }
 
-/* Темы */
-:root {
-    --bg-color: #ffffff;
-    --text-color: #000000;
-    --header-bg: #f1f1f1;
-    --border-color: #cccccc;
-    --suggestion-bg: #ffffff;
-    --suggestion-hover: #f0f0f0;
+#series-details {
+    margin-top: 2rem;
 }
 
-.dark-theme {
-    --bg-color: #1e1e1e;
-    --text-color: #ffffff;
-    --header-bg: #2c2c2c;
-    --border-color: #444444;
-    --suggestion-bg: #2c2c2c;
-    --suggestion-hover: #444444;
+.ratings-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+.ratings-table th, .ratings-table td {
+    padding: 0.8rem;
+    text-align: center;
+    border-bottom: 1px solid #444;
+}
+
+.ratings-table th {
+    background: #3c3c5c;
+}
+
+.ratings-table td {
+    background: #2a2a45;
 }
