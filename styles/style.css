@@ -1,0 +1,82 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--header-bg);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 1.5rem;
+}
+
+.theme-toggle {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.search-container {
+    margin: 2rem auto;
+    text-align: center;
+}
+
+#search-input {
+    padding: 0.5rem;
+    width: 90%;
+    max-width: 500px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+}
+
+.suggestions {
+    margin: 0.5rem auto;
+    max-width: 500px;
+    text-align: left;
+    position: relative;
+}
+
+.suggestions div {
+    background-color: var(--suggestion-bg);
+    padding: 0.5rem;
+    border: 1px solid var(--border-color);
+    cursor: pointer;
+}
+
+.suggestions div:hover {
+    background-color: var(--suggestion-hover);
+}
+
+.hidden {
+    display: none;
+}
+
+/* Темы */
+:root {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --header-bg: #f1f1f1;
+    --border-color: #cccccc;
+    --suggestion-bg: #ffffff;
+    --suggestion-hover: #f0f0f0;
+}
+
+.dark-theme {
+    --bg-color: #1e1e1e;
+    --text-color: #ffffff;
+    --header-bg: #2c2c2c;
+    --border-color: #444444;
+    --suggestion-bg: #2c2c2c;
+    --suggestion-hover: #444444;
+}
