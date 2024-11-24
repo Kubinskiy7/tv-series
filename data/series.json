@@ -1,0 +1,14 @@
+[
+    {
+        "name": "Attack on Titan",
+        "description": "Описание сериала",
+        "image": "attack_on_titan.jpg",
+        "ratings": [9.1, 9.2, 8.9, 9.5]
+    },
+    {
+        "name": "Rick and Morty",
+        "description": "Описание сериала",
+        "image": "rick_and_morty.jpg",
+        "ratings": [8.7, 9.0, 7.6, 9.1]
+    }
+]
